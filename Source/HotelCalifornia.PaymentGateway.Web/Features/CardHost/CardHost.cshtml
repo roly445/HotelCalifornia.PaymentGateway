@@ -1,0 +1,30 @@
+@model HotelCalifornia.PaymentGateway.Web.Features.CardHost.CodeHostViewModel
+@{
+    Layout = null;
+}
+<html>
+<head>
+<title>Payment Host</title>
+</head>
+<body>
+
+
+<script>
+    if (document.readyState !== 'loading') {
+        this.init();
+    } else {
+        document.addEventListener('DOMContentLoaded', e => this.init());
+    }  
+
+    function init() {
+        var app = new paymentGateway.Host({
+            cardPaymentEnabled: @Model.CardPaymentEnabled.ToString().ToLower(),
+            methods: ['@Html.Raw($"{string.Join("', '", Model.Methods)}")'],
+            currency: '@Model.Currency',
+            schemes: ['@Html.Raw($"{string.Join("', '", Model.Schemes)}")']
+        });
+    }
+</script>
+<script type="text/javascript" src="/cardhost.js?434c6f6044bf692e89b2"></script></body>
+
+</html>

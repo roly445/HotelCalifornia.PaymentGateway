@@ -1,0 +1,21 @@
+{
+  "name": "hotelcalifornia-paymentgateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "penpal": "^3.0.3"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.0.6",
+    "ts-loader": "3.5.0",
+    "typescript": "^2.7.2",
+    "webpack": "3.11.0"
+  }
+}

@@ -8,7 +8,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGateway.Web", "Source\HotelCalifornia.PaymentGateway.Web\HotelCalifornia.PaymentGateway.Web.csproj", "{1138A5A1-F62D-48E6-A142-39C9234D320B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCalifornia.PaymentGateway.Core", "Source\HotelCalifornia.PaymentGateway.Core\HotelCalifornia.PaymentGateway.Core.csproj", "{9534FE20-7318-41B0-B074-B8CC670F065C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGateway.Core", "Source\HotelCalifornia.PaymentGateway.Core\HotelCalifornia.PaymentGateway.Core.csproj", "{9534FE20-7318-41B0-B074-B8CC670F065C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{818EDCD2-FBB8-47DD-B3FC-4CD63E702B45}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

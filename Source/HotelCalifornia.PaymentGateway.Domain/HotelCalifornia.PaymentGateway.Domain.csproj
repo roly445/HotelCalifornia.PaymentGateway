@@ -4,9 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="AggregatesModel\IntegrationAggregate\" />
-    <Folder Include="AggregatesModel\PaymentAggregate\" />
-  </ItemGroup>
-
 </Project>
