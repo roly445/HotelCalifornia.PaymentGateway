@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HotelCalifornia.PaymentGateway.Domain
+namespace HotelCalifornia.PaymentGateway.Domain.IntegrationAggregate
 {
     public interface IIntegrationRepository
     {

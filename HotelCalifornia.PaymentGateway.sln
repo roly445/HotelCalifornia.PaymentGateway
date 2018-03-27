@@ -8,8 +8,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGateway.Web", "Source\HotelCalifornia.PaymentGateway.Web\HotelCalifornia.PaymentGateway.Web.csproj", "{1138A5A1-F62D-48E6-A142-39C9234D320B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelCalifornia.PaymentGateway.Core", "Source\HotelCalifornia.PaymentGateway.Core\HotelCalifornia.PaymentGateway.Core.csproj", "{9534FE20-7318-41B0-B074-B8CC670F065C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{818EDCD2-FBB8-47DD-B3FC-4CD63E702B45}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -51,18 +49,6 @@ Global
 		{1138A5A1-F62D-48E6-A142-39C9234D320B}.Release|x64.Build.0 = Release|Any CPU
 		{1138A5A1-F62D-48E6-A142-39C9234D320B}.Release|x86.ActiveCfg = Release|Any CPU
 		{1138A5A1-F62D-48E6-A142-39C9234D320B}.Release|x86.Build.0 = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|x64.Build.0 = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Debug|x86.Build.0 = Debug|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|x64.ActiveCfg = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|x64.Build.0 = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|x86.ActiveCfg = Release|Any CPU
-		{9534FE20-7318-41B0-B074-B8CC670F065C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,7 +56,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B922C789-711F-49B0-A443-F7AC9B79C69B} = {B479DBF0-2177-11E8-9DC3-C532C94433D1}
 		{1138A5A1-F62D-48E6-A142-39C9234D320B} = {B479DBF0-2177-11E8-9DC3-C532C94433D1}
-		{9534FE20-7318-41B0-B074-B8CC670F065C} = {B479DBF0-2177-11E8-9DC3-C532C94433D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32980AEE-D00F-4232-B2DB-0DBB3E0828C9}

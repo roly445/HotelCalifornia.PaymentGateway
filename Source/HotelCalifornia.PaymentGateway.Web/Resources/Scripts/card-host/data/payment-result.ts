@@ -6,6 +6,6 @@ export interface PaymentResult {
     payerEmail?: string;
     payerName?: string;
     payerPhone?: string;
-    shippingAddress?: PaymentAddress;
+    shippingAddress?: string;
     shippingOption?: string;
 }

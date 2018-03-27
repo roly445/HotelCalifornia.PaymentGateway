@@ -5,6 +5,7 @@ import { AdditionalOptions } from './data/addition-options'
 import { GatewayResponse } from './data/gateway-response';
 import { PaymentClient } from './data/payment-client';
 import { PaymentInfo } from './data/payment-info';
+import { Integration } from './data/integration';
 
 export class Host {
     connectionPromise: Promise<PaymentClient>;
@@ -12,9 +13,18 @@ export class Host {
     shippingInfo: ShippingInfo;
     paymentShippingOptions: PaymentShippingOption[];
     paymentRequest: PaymentRequest;
+    private cardPaymentLiteral:string = '%%__cardPaymentEnabled__%%';
+    private integration:Integration = {
+        schemes: ['%%__schemes__%%'],
+        cardPaymentEnabled: this.cardPaymentLiteral === 'True',
+        cardPostUrl: '%%__cardPostUrl__%%',
+        currency: '%%__currency__%%',
+        identifyingToken: '%%__identifyingToken__%%',
+        methods: ['%%__methods__%%']
+    }
 
-    constructor(private integration:any) {
-        // LOAD DATA FROM PAGE
+    constructor() {
+
         var contextThis = this;
         var clientConnection = Penpal.connectToParent({
             methods: {
@@ -24,6 +34,7 @@ export class Host {
                         supportedMethods: 'basic-card',
                         data: {
                             supportedNetworks: contextThis.integration.schemes,
+                            supportedMethods: contextThis.integration.methods
                           },
                     }];
                     contextThis.originalTotal = {
@@ -69,6 +80,9 @@ export class Host {
                         paymentDetails,
                         options
                     );
+                    contextThis.paymentRequest.canMakePayment().then((a:boolean)  => {
+
+                    })
 
                     if (shippingInfo) {
                         contextThis.shippingInfo = shippingInfo;
@@ -85,7 +99,7 @@ export class Host {
                         .show()
                     
             .then((paymentResponse: PaymentResponse) => {
-                return fetch('api/gateway/make-card-payment', {
+                return fetch(contextThis.integration.cardPostUrl, {
                     method: 'post',
                     body: JSON.stringify({
                         identifingToken: contextThis.integration.identifyingToken,
@@ -110,7 +124,7 @@ export class Host {
                                     payerEmail: paymentResponse.payerEmail,
                                     payerName: paymentResponse.payerName,
                                     payerPhone: paymentResponse.payerPhone,
-                                    shippingAddress: paymentResponse.shippingAddress,
+                                    shippingAddress: JSON.stringify(paymentResponse.shippingAddress),
                                     shippingOption: paymentResponse.shippingOption
                                 };
                                 return data;
@@ -230,4 +244,10 @@ export class Host {
         }));
     }
 }
+
+if (document.readyState !== 'loading') {
+    new Host();
+} else {
+    document.addEventListener('DOMContentLoaded', e => new Host());
+} 
 
